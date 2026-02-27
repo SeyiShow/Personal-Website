@@ -33,14 +33,6 @@ export default function Hero() {
                             priority
                             className={styles.photo}
                         />
-                        <Image
-                            src="/images/meet.png"
-                            alt="Seyi Sorinade Hover"
-                            width={520}
-                            height={600}
-                            priority
-                            className={`${styles.photo} ${styles.photoHover}`}
-                        />
                     </div>
                 </div>
             </div>

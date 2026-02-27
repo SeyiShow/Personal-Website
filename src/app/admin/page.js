@@ -8,6 +8,7 @@ export default function AdminDashboard() {
     const [activeTab, setActiveTab] = useState("portfolio");
     const [portfolio, setPortfolio] = useState([]);
     const [testimonials, setTestimonials] = useState([]);
+    const [partners, setPartners] = useState([]);
     const [loading, setLoading] = useState(true);
     const router = useRouter();
 
@@ -18,12 +19,14 @@ export default function AdminDashboard() {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const [portRes, testRes] = await Promise.all([
+            const [portRes, testRes, partRes] = await Promise.all([
                 fetch("/api/portfolio"),
                 fetch("/api/testimonials"),
+                fetch("/api/partners"),
             ]);
             if (portRes.ok) setPortfolio(await portRes.json());
             if (testRes.ok) setTestimonials(await testRes.json());
+            if (partRes.ok) setPartners(await partRes.json());
         } catch (error) {
             console.error("Failed to fetch data", error);
         } finally {
@@ -44,7 +47,8 @@ export default function AdminDashboard() {
             const res = await fetch(`/api/${type}/${id}`, { method: "DELETE" });
             if (res.ok) {
                 if (type === "portfolio") setPortfolio(portfolio.filter(p => p._id !== id));
-                else setTestimonials(testimonials.filter(t => t._id !== id));
+                else if (type === "testimonials") setTestimonials(testimonials.filter(t => t._id !== id));
+                else if (type === "partners") setPartners(partners.filter(p => p._id !== id));
             }
         } catch (error) {
             alert("Delete failed");
@@ -73,10 +77,16 @@ export default function AdminDashboard() {
                 >
                     Testimonials
                 </button>
+                <button
+                    className={activeTab === "partners" ? styles.activeTab : ""}
+                    onClick={() => setActiveTab("partners")}
+                >
+                    Partners
+                </button>
             </div>
 
             <div className={styles.content}>
-                {activeTab === "portfolio" ? (
+                {activeTab === "portfolio" && (
                     <section>
                         <div className={styles.sectionHeader}>
                             <h2>Portfolio Items</h2>
@@ -114,7 +124,9 @@ export default function AdminDashboard() {
                             </tbody>
                         </table>
                     </section>
-                ) : (
+                )}
+
+                {activeTab === "testimonials" && (
                     <section>
                         <div className={styles.sectionHeader}>
                             <h2>Testimonials</h2>
@@ -145,6 +157,44 @@ export default function AdminDashboard() {
                                             <div className={styles.actions}>
                                                 <button onClick={() => router.push(`/admin/testimonials/${item._id}`)} className={styles.editBtn}>Edit</button>
                                                 <button onClick={() => handleDelete("testimonials", item._id)} className={styles.deleteBtn}>Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </section>
+                )}
+
+                {activeTab === "partners" && (
+                    <section>
+                        <div className={styles.sectionHeader}>
+                            <h2>Partner Logos</h2>
+                            <button onClick={() => router.push("/admin/partners/new")} className={styles.addBtn}>Add Partner</button>
+                        </div>
+                        <table className={styles.table}>
+                            <thead>
+                                <tr>
+                                    <th>Logo</th>
+                                    <th>Name</th>
+                                    <th>Order</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {partners.map(item => (
+                                    <tr key={item._id}>
+                                        <td>
+                                            <div className={styles.tableImg}>
+                                                <img src={item.logo} alt={item.name} style={{ background: '#333', padding: '5px' }} />
+                                            </div>
+                                        </td>
+                                        <td><strong>{item.name}</strong></td>
+                                        <td>{item.order}</td>
+                                        <td>
+                                            <div className={styles.actions}>
+                                                <button onClick={() => router.push(`/admin/partners/${item._id}`)} className={styles.editBtn}>Edit</button>
+                                                <button onClick={() => handleDelete("partners", item._id)} className={styles.deleteBtn}>Delete</button>
                                             </div>
                                         </td>
                                     </tr>

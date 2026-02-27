@@ -61,18 +61,53 @@
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 .marqueeTrack {
     display: flex;
-    gap: var(--space-3xl);
     width: max-content;
-    animation: marqueeScroll 20s linear infinite;
+    animation: slide 30s linear infinite;
+}
+
+.marqueeTrack:hover {
+    animation-play-state: paused;
+}
+
+.marqueeScrollPart {
+    display: flex;
+    gap: var(--space-3xl);
+    padding-right: var(--space-3xl);
 }
 
 .brandItem {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: var(--space-md);
     flex-shrink: 0;
+}
+
+.logoWrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brandLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    /* Force to white if needed */
 }
 
 .brandName {
@@ -80,6 +115,7 @@
     font-weight: var(--fw-semibold);
     color: var(--color-white);
     letter-spacing: -0.5px;
+    white-space: nowrap;
 }
 
 @media (max-width: 968px) {
