@@ -1,0 +1,214 @@
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-xl);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--admin-border);
+}
+
+.header h1 {
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-bold);
+}
+
+.logoutBtn {
+    padding: 8px 16px;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.tabs button {
+    padding: 10px 20px;
+    border: 1px solid var(--admin-border);
+    background: white;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: var(--fw-medium);
+}
+
+.tabs .activeTab {
+    background-color: var(--admin-primary);
+    color: white;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.addBtn {
+    padding: 12px 24px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: var(--fw-bold);
+    transition: var(--transition);
+}
+
+.addBtn:hover {
+    background-color: #059669;
+}
+
+.addBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.table th {
+    background-color: #f9fafb;
+    font-weight: var(--fw-bold);
+    color: var(--color-text-light);
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.editBtn,
+.deleteBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: var(--fs-xs);
+    margin-right: 8px;
+}
+
+.editBtn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.deleteBtn {
+    background-color: #ef4444;
+    color: white;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: var(--fs-xl);
+}
+
+.form {
+    background: white;
+    padding: var(--space-2xl);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.formGroup {
+    margin-bottom: var(--space-lg);
+}
+
+.formGroup label {
+    display: block;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    color: var(--color-bg-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--admin-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-md);
+    font-family: inherit;
+    background: #fdfdfd;
+}
+
+.formGroup textarea {
+    resize: vertical;
+}
+
+.imagePreview {
+    margin-top: var(--space-md);
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--admin-border);
+}
+
+.tabsBtn {
+    background: none;
+    border: 1px solid var(--admin-border);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: var(--fs-xs);
+    transition: var(--transition);
+}
+
+.tabsBtn:hover {
+    background: #f1f5f9;
+}
+
+.tableImg {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: #eee;
+}
+
+.tableImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hideMobile {
+    display: table-cell;
+}
+
+@media (max-width: 768px) {
+    .hideMobile {
+        display: none;
+    }
+}

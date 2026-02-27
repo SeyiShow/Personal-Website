@@ -1,0 +1,128 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: var(--transition);
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
+    padding: 14px 0;
+}
+
+.navInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo img {
+    height: 36px;
+    width: auto;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.navLink {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--color-text);
+    transition: var(--transition);
+    position: relative;
+}
+
+.navLink::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-black);
+    transition: var(--transition);
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.navCta {
+    padding: 10px 24px;
+    font-size: var(--fs-sm);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 10;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background: var(--color-black);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navLinks {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--color-white);
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+    }
+
+    .navLinks.open {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .navLink {
+        font-size: var(--fs-xl);
+    }
+}

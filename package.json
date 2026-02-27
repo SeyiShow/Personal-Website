@@ -9,9 +9,17 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fontsource/public-sans": "^5.2.7",
+    "@fontsource/uncut-sans": "^5.2.5",
+    "cookie": "^1.1.1",
+    "jose": "^6.1.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.1.0",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-icons": "^5.5.0",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",

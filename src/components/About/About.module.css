@@ -1,0 +1,126 @@
+.about {
+    padding: var(--space-3xl) 0;
+    /* background: #000000; */
+    color: #ffffff;
+    /* margin: var(--space-xl) 0; */
+}
+
+.aboutInner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
+    background: #000000;
+    border-radius: var(--radius-sm);
+    /* border-bottom-left-radius: var(--radius-sm); */
+
+}
+
+.contentCol {
+    max-width: 600px;
+    /* background: var(--color-bg); */
+    border-radius: var(--radius-sm);
+    padding-left: var(--space-xl);
+}
+
+.label {
+    display: inline-block;
+    padding: 4px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    margin-bottom: var(--space-xl);
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: var(--space-xl);
+    letter-spacing: -0.01em;
+}
+
+.desc {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 540px;
+}
+
+.desc p {
+    margin-bottom: var(--space-md);
+}
+
+.imageCol {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imageWrapper {
+    width: 100%;
+    max-width: 500px;
+    border-top-right-radius: var(--radius-sm);
+    border-bottom-right-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--color-bg-hero);
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 1100px) {
+    .title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .aboutInner {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+        text-align: center;
+    }
+
+    .contentCol {
+        padding-left: 0;
+        padding: var(--space-xl);
+        margin: 0 auto;
+        order: 2;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .desc {
+        margin: 0 auto;
+    }
+
+    .imageCol {
+        justify-content: center;
+        order: 1;
+    }
+
+    .imageWrapper {
+        border-radius: var(--radius-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .contentCol {
+        padding: var(--space-md);
+        padding-top: var(--space-xl);
+    }
+}
