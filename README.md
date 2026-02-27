@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Seyi Sorinade Portfolio
 
-## Getting Started
+A professional, high-performance portfolio website built with Next.js, featuring a clean design and a robust administrative backend for content management.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Public Frontend
+- **Dual-Image Hero Section**: Interactive hover transition between hero and about images.
+- **Dynamic Portfolio Showcase**: Categorized view of projects with detailed overlays.
+- **Client Testimonials**: Slideshow representation of client feedback.
+- **Brand Identity**: Integrated typography using "Public Sans" for body and "Uncut Sans" for headings.
+- **Full Responsitivity**: Optimized for all devices from desktop to mobile.
+- **SEO Optimized**: Standard meta tags and semantic HTML structure.
+
+### Admin Dashboard (`/admin`)
+- **Secure Authentication**: JWT-based login protected via HTTP-only cookies.
+- **Content Management (CRUD)**:
+  - **Portfolio**: Add, edit, and delete projects (supports direct image uploads).
+  - **Testimonials**: Manage client quotes and ratings.
+- **Unified Interface**: Tabbed dashboard for quick management.
+
+## 🛠️ Technology Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Database**: [MongoDB](https://www.mongodb.com/)
+- **Styling**: Vanilla CSS Modules (Glassmorphism & Modern UI)
+- **Authentication**: JWT (`jsonwebtoken` & `jose`)
+- **Icons**: `react-icons`
+- **Fonts**: `@fontsource/public-sans` & `@fontsource/uncut-sans`
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file in the root directory and add the following:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+MONGODB_DB=your_database_name
+JWT_SECRET=your_secure_random_secret
+ADMIN_PASSWORD=your_admin_login_password
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚥 Getting Started
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 1. Install Dependencies
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-## Learn More
+### 3. Build for Production
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app/(public)`: Public facing routes (Home, Layout).
+- `src/app/admin`: Password-protected admin dashboard.
+- `src/app/api`: Backend API routes for MongoDB interaction and image uploads.
+- `src/components`: Reusable UI components (Hero, Portfolio, etc.).
+- `public/uploads`: Directory designated for uploaded project images.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+This project is private and for personal use.
