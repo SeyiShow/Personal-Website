@@ -4,16 +4,12 @@ import { useState, useEffect, use } from "react";
 import { useRouter } from "next/navigation";
 import styles from "../../admin.module.css";
 
-export default function PortfolioForm({ params }) {
+export default function PartnerForm({ params }) {
     const { id } = use(params);
     const isNew = id === "new";
     const [formData, setFormData] = useState({
-        title: "",
-        description: "",
-        category: "Branding",
-        tags: "", // Added tags as string for input
-        image: "",
-        link: "",
+        name: "",
+        logo: "",
         order: 0,
     });
     const [loading, setLoading] = useState(false);
@@ -22,14 +18,10 @@ export default function PortfolioForm({ params }) {
 
     useEffect(() => {
         if (!isNew) {
-            fetch(`/api/portfolio/${id}`)
+            fetch(`/api/partners/${id}`)
                 .then(res => res.json())
                 .then(data => {
-                    if (data && !data.error) {
-                        // Convert tags array to comma-separated string for editing
-                        const tagsStr = Array.isArray(data.tags) ? data.tags.join(", ") : (data.tags || "");
-                        setFormData({ ...data, tags: tagsStr });
-                    }
+                    if (data && !data.error) setFormData(data);
                 });
         }
     }, [id, isNew]);
@@ -49,7 +41,7 @@ export default function PortfolioForm({ params }) {
             });
             const data = await res.json();
             if (data.imageUrl) {
-                setFormData(prev => ({ ...prev, image: data.imageUrl }));
+                setFormData(prev => ({ ...prev, logo: data.imageUrl }));
             } else {
                 alert(data.error || "Upload failed");
             }
@@ -64,20 +56,14 @@ export default function PortfolioForm({ params }) {
         e.preventDefault();
         setLoading(true);
 
-        // Convert tags string back to array before sending
-        const payload = {
-            ...formData,
-            tags: formData.tags.split(",").map(t => t.trim()).filter(t => t !== "")
-        };
-
-        const url = isNew ? "/api/portfolio" : `/api/portfolio/${id}`;
+        const url = isNew ? "/api/partners" : `/api/partners/${id}`;
         const method = isNew ? "POST" : "PUT";
 
         try {
             const res = await fetch(url, {
                 method,
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload),
+                body: JSON.stringify(formData),
             });
 
             if (res.ok) {
@@ -85,7 +71,7 @@ export default function PortfolioForm({ params }) {
                 router.refresh();
             } else {
                 const errorData = await res.json();
-                alert(errorData.error || "Failed to save portfolio item");
+                alert(errorData.error || "Failed to save partner");
             }
         } catch (error) {
             alert("An error occurred");
@@ -102,39 +88,24 @@ export default function PortfolioForm({ params }) {
     return (
         <div className={styles.dashboard}>
             <header className={styles.header}>
-                <h1>{isNew ? "Add Portfolio Item" : "Edit Portfolio Item"}</h1>
+                <h1>{isNew ? "Add Partner" : "Edit Partner"}</h1>
                 <button onClick={() => router.push("/admin")} className={styles.tabsBtn}>Back to Dashboard</button>
             </header>
 
             <form className={styles.form} onSubmit={handleSubmit}>
                 <div className={styles.formGroup}>
-                    <label>Title</label>
-                    <input name="title" value={formData.title} onChange={handleChange} required />
+                    <label>Partner Name</label>
+                    <input name="name" value={formData.name} onChange={handleChange} required />
                 </div>
                 <div className={styles.formGroup}>
-                    <label>Category (e.g. Branding, Personal Brands)</label>
-                    <input name="category" value={formData.category} onChange={handleChange} required />
-                    <p className={styles.helpText}>Enter a category name for filtering.</p>
-                </div>
-                <div className={styles.formGroup}>
-                    <label>Tags (comma separated)</label>
-                    <input name="tags" value={formData.tags} onChange={handleChange} placeholder="BRANDING, SOCIALS, UI/UX" />
-                </div>
-                <div className={styles.formGroup}>
-                    <label>Image</label>
+                    <label>Logo (SVG or Image)</label>
                     <input type="file" onChange={handleFileUpload} accept="image/*" className={styles.fileInput} />
-                    {uploading && <p className={styles.uploadStatus}>Uploading image...</p>}
-                    {formData.image && (
-                        <img src={formData.image} alt="Preview" className={styles.imagePreview} />
+                    {uploading && <p className={styles.uploadStatus}>Uploading logo...</p>}
+                    {formData.logo && (
+                        <div style={{ background: '#333', padding: '20px', display: 'inline-block', borderRadius: '4px', marginTop: '10px' }}>
+                            <img src={formData.logo} alt="Preview" style={{ maxHeight: '60px' }} />
+                        </div>
                     )}
-                </div>
-                <div className={styles.formGroup}>
-                    <label>Description</label>
-                    <textarea name="description" value={formData.description} onChange={handleChange} rows="4" />
-                </div>
-                <div className={styles.formGroup}>
-                    <label>Project Link</label>
-                    <input name="link" value={formData.link} onChange={handleChange} placeholder="#" />
                 </div>
                 <div className={styles.formGroup}>
                     <label>Order</label>
@@ -142,7 +113,7 @@ export default function PortfolioForm({ params }) {
                 </div>
                 <div style={{ display: 'flex', gap: '10px' }}>
                     <button type="submit" className={styles.addBtn} disabled={loading || uploading}>
-                        {loading ? "Saving..." : "Save Portfolio Item"}
+                        {loading ? "Saving..." : "Save Partner"}
                     </button>
                 </div>
             </form>

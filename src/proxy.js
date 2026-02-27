@@ -3,7 +3,7 @@ import * as jose from "jose";
 
 const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret_here";
 
-export async function middleware(request) {
+export async function proxy(request) {
     const { pathname } = request.nextUrl;
 
     if (pathname.startsWith("/admin") && pathname !== "/admin/login") {

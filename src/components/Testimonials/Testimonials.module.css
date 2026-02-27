@@ -1,12 +1,12 @@
 .testimonials {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-2xl) 0;
     background: var(--color-bg);
-    margin: var(--space-4xl) 0;
+    margin: var(--space-2xl) 0;
 }
 
 .card {
     max-width: 700px;
-    margin: var(--space-2xl) auto 0;
+    margin: var(--space-xl) auto 0;
     text-align: center;
 }
 
@@ -27,7 +27,7 @@
     line-height: 1.8;
     color: var(--color-text);
     font-style: normal;
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-xl);
     font-weight: var(--fw-regular);
 }
 
