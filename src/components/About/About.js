@@ -33,8 +33,8 @@ export default function About() {
                         <Image
                             src="/images/meet.png"
                             alt="meet me"
-                            width={1000}
-                            height={1200}
+                            fill
+                            sizes="(max-width: 968px) 100vw, 40vw"
                             className={styles.photo}
                         />
                     </div>

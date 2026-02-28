@@ -28,9 +28,9 @@ export default function Hero() {
                         <Image
                             src="/images/hero.png"
                             alt="Seyi Sorinade"
-                            width={520}
-                            height={600}
+                            fill
                             priority
+                            sizes="(max-width: 968px) 100vw, 40vw"
                             className={styles.photo}
                         />
                     </div>
