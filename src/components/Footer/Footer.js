@@ -43,9 +43,14 @@ export default function Footer() {
                 </div>
             </div>
             <div className={`container ${styles.bottom}`}>
-                <p className={styles.copyright}>
-                    © {new Date().getFullYear()} Seyi Sorinade. All rights reserved.
-                </p>
+                <div className={styles.bottomInner}>
+                    <p className={styles.copyright}>
+                        © {new Date().getFullYear()} Seyi Sorinade. All rights reserved.
+                    </p>
+                    <p className={styles.developer}>
+                        Developed by <a href="https://htcode.vercel.app/" target="_blank" rel="noopener noreferrer">Htcode</a>
+                    </p>
+                </div>
             </div>
         </footer>
     );

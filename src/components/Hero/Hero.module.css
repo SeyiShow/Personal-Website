@@ -1,8 +1,7 @@
 .hero {
-    min-height: 100vh;
-    /* Changed from 100vh to ensure it fits better with padding */
-    display: flex;
-    align-items: center;
+    /* min-height: 40vh; */
+    /* display: flex; */
+    /* align-items: center; */
     padding: var(--space-4xl) 0;
 
 }
@@ -20,14 +19,14 @@
 
 .heroContent {
     max-width: 600px;
-    padding: var(--space-4xl);
+    padding: var(--space-3xl);
     /* Increased padding */
-    padding-left: var(--space-5xl);
+    /* padding-left: var(--space-5xl); */
     /* Even more padding from the left edge */
 }
 
 .heroTitle {
-    font-size: var(--fs-5xl);
+    font-size: var(--fs-4xl);
     font-weight: var(--fw-bold);
     line-height: 1.08;
     letter-spacing: -2px;
@@ -69,16 +68,16 @@
 .heroImage {
     display: flex;
     justify-content: flex-end;
-    height: 100%;
+    height: auto;
 }
 
 .imageWrapper {
     width: 100%;
-    max-width: 100%;
+    max-width: 520px;
     height: 100%;
     background: var(--color-bg-hero);
     position: relative;
-    aspect-ratio: 520 / 600;
+    aspect-ratio: 520 / 560;
 }
 
 .photo {
@@ -86,6 +85,37 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 1200px) {
+    .heroInner {
+        gap: var(--space-2xl);
+    }
+
+    .heroContent {
+        padding: var(--space-2xl);
+    }
+
+    .heroTitle {
+        font-size: calc(var(--fs-4xl) * 0.9);
+    }
+}
+
+@media (max-width: 1024px) {
+    .heroInner {
+        gap: var(--space-xl);
+    }
+
+    .heroContent {
+        padding: var(--space-xl);
+    }
+
+    .heroTitle {
+        font-size: calc(var(--fs-4xl) * 0.8);
+    }
 }
 
 @media (max-width: 968px) {
@@ -125,7 +155,7 @@
     }
 
     .imageWrapper {
-        aspect-ratio: 1 / 1.1;
+        aspect-ratio: 1 / 1;
     }
 }
 
