@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaLinkedin, FaBehance, FaDribbble, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaBehance, FaDribbble, FaTwitter, FaInstagram } from "react-icons/fa";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -26,6 +26,9 @@ export default function Footer() {
                             <a href="#consultation" className={styles.link}>Consultation</a>
                         </div>
                         <div className={styles.socials}>
+                            <a href="https://www.instagram.com/oluwaseyi.so/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                                <FaInstagram />
+                            </a>
                             <a href="https://x.com/ThatVerySeyi" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                                 <FaTwitter />
                             </a>
