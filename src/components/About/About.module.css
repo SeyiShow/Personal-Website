@@ -46,6 +46,8 @@
     line-height: 1.1;
     margin-block: var(--space-md);
     letter-spacing: -0.01em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .desc {
@@ -120,11 +122,12 @@
     }
 
     .contentCol {
-        padding-left: 0;
-        padding: var(--space-xl);
+        padding: var(--space-xl) var(--space-lg);
         margin: 0 auto;
         order: 2;
         align-items: center;
+        text-align: center;
+        width: 100%;
     }
 
     .title {
@@ -145,6 +148,7 @@
         border-radius: var(--radius-sm);
         aspect-ratio: 1 / 1;
         height: auto;
+        min-height: auto;
     }
 }
 
@@ -154,7 +158,6 @@
     }
 
     .contentCol {
-        padding: var(--space-xl);
-        padding-top: var(--space-xl);
+        padding: var(--space-lg) var(--space-md);
     }
 }
