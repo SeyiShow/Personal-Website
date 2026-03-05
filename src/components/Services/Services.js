@@ -31,7 +31,7 @@ export default function Services() {
                 <div className={styles.imageCol}>
                     <div className={styles.imageWrapper}>
                         <Image
-                            src="/images/skills.png"
+                            src="/images/seyi.jpeg"
                             alt="Skills and services"
                             width={480}
                             height={560}

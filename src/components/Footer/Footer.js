@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaInstagram, FaLinkedin, FaBehance, FaDribbble } from "react-icons/fa";
+import { FaLinkedin, FaBehance, FaDribbble, FaTwitter } from "react-icons/fa";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -26,16 +26,16 @@ export default function Footer() {
                             <a href="#consultation" className={styles.link}>Consultation</a>
                         </div>
                         <div className={styles.socials}>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-                                <FaInstagram />
+                            <a href="https://x.com/ThatVerySeyi" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                                <FaTwitter />
                             </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                            <a href="https://www.linkedin.com/in/oluwaseyi-sorinade-a519b81a0/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                                 <FaLinkedin />
                             </a>
-                            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                            <a href="https://www.behance.net/oluwaseyivictor" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                                 <FaBehance />
                             </a>
-                            <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                            <a href="https://dribbble.com/ThatVerySeyi" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                                 <FaDribbble />
                             </a>
                         </div>

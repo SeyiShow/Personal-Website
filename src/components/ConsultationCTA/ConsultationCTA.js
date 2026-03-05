@@ -21,7 +21,7 @@ export default function ConsultationCTA() {
                     </p>
                 </div>
 
-                <a href="mailto:contact@oluwaseyi.ng" className={`btn btn-outline ${styles.ctaBtn}`}>
+                <a href="https://calendly.com/oyeyemivictor1/30min" className={`btn btn-outline ${styles.ctaBtn}`}>
                     Get Started
                 </a>
             </div>
