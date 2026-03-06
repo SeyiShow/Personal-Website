@@ -20,7 +20,7 @@ export default function About() {
                             purpose.
                         </p>
                         <p>
-                            Professionally, With a background in industrial and
+                            Professionally, with a background in industrial and
                             electrical engineering, I&apos;ve partnered with multiple successful
                             startups, helping them shape their identity through brand strategy,
                             design and excellent communication. I believe business success
