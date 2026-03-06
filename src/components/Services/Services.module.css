@@ -2,7 +2,7 @@
     padding: var(--space-2xl);
     background: var(--color-bg);
     margin: var(--space-2xl) 0;
-
+    border-radius: var(--radius-sm);
 }
 
 .servicesInner {
@@ -20,7 +20,7 @@
 .imageWrapper {
     width: 100%;
     max-width: 540px;
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     overflow: hidden;
 }
 

@@ -12,7 +12,7 @@
     gap: var(--space-4xl);
     align-items: center;
     background: var(--color-bg);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     width: 100%;
     overflow: hidden;
 }
