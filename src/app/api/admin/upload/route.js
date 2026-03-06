@@ -13,6 +13,7 @@ export async function POST(request) {
         // Upload to Vercel Blob
         const blob = await put(file.name, file, {
             access: "public",
+            addRandomSuffix: true,
         });
 
         // The blob.url is the permanent URL for the image
