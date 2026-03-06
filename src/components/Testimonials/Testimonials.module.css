@@ -2,6 +2,7 @@
     padding: var(--space-2xl) 0;
     background: var(--color-bg);
     margin: var(--space-2xl) 0;
+    border-radius: var(--radius-sm);
 }
 
 .card {

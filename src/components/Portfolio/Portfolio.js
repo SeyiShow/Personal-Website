@@ -114,6 +114,18 @@ export default function Portfolio() {
                         </p>
                     </div>
 
+                    <div className={styles.categories}>
+                        {categories.map((cat) => (
+                            <button
+                                key={cat}
+                                className={`${styles.pill} ${activeCategory === cat ? styles.active : ""}`}
+                                onClick={() => setActiveCategory(cat)}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
+
                     <div className={styles.grid}>
                         {/* First Item: Large Card */}
                         {renderCard(filtered[0], styles.largeCard)}
@@ -129,17 +141,7 @@ export default function Portfolio() {
                         </div>
                     </div>
 
-                    <div className={styles.categories}>
-                        {categories.map((cat) => (
-                            <button
-                                key={cat}
-                                className={`${styles.pill} ${activeCategory === cat ? styles.active : ""}`}
-                                onClick={() => setActiveCategory(cat)}
-                            >
-                                {cat}
-                            </button>
-                        ))}
-                    </div>
+
                 </div>
             </div>
         </section>

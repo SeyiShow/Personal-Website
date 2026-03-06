@@ -1,7 +1,8 @@
 .targetAudience {
     background: #111111;
-    padding: var(--space-4xl) 0;
+    padding: var(--space-3xl) 0;
     color: #ffffff;
+    border-radius: var(--radius-sm);
 }
 
 .inner {

@@ -2,7 +2,7 @@
     padding: var(--space-5xl) 0;
     text-align: center;
     background-color: var(--color-bg);
-    margin-bottom: var(--space-5xl);
+    margin-bottom: var(--space-3xl);
     border-radius: var(--radius-sm);
 }
 

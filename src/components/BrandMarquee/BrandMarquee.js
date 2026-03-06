@@ -54,7 +54,7 @@ export default function BrandMarquee() {
                                                     className={styles.brandLogo}
                                                 />
                                             </div>
-                                            <span className={styles.brandName}>{brand.name}</span>
+                                            {/* <span className={styles.brandName}>{brand.name}</span> */}
                                         </div>
                                     ))}
                                 </div>
@@ -69,7 +69,7 @@ export default function BrandMarquee() {
                                                     className={styles.brandLogo}
                                                 />
                                             </div>
-                                            <span className={styles.brandName}>{brand.name}</span>
+                                            {/* <span className={styles.brandName}>{brand.name}</span> */}
                                         </div>
                                     ))}
                                 </div>

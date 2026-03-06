@@ -63,7 +63,7 @@ export default function Testimonials() {
 
                     <div className={styles.author}>
                         <div className={styles.avatar}>
-                            {t.name?.charAt(0)}
+                            <img src={t.avatar} alt={t.name} style={{ borderRadius: "50%", width: "100%", height: "100%", objectFit: "cover" }} />
                         </div>
                         <div>
                             <p className={styles.authorName}>{t.name}</p>
