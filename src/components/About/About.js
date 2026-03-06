@@ -32,7 +32,7 @@ export default function About() {
                     <div className={styles.imageWrapper}>
                         <Image
                             src="/images/meet.png"
-                            alt="meet me"
+                            alt="Seyi Sorinade - Brand Strategist and Designer"
                             fill
                             sizes="(max-width: 968px) 100vw, 40vw"
                             className={styles.photo}
