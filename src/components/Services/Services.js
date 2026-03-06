@@ -32,7 +32,7 @@ export default function Services() {
                     <div className={styles.imageWrapper}>
                         <Image
                             src="/images/seyi.jpeg"
-                            alt="Skills and services"
+                            alt="Seyi Sorinade's professional services and skills"
                             width={480}
                             height={560}
                             className={styles.photo}
