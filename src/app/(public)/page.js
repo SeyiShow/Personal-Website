@@ -13,16 +13,18 @@ export default function Home() {
   return (
     <main>
       <div className="container">
-        <Hero />
-        <Statement />
-        <BrandMarquee />
-        <Portfolio />
-        <TargetAudience />
-        <Testimonials />
-        <Services />
-        <About />
-        <FAQs />
-        <ConsultationCTA />
+        <div className="container-fluid">
+          <Hero />
+          <Statement />
+          <BrandMarquee />
+          <Portfolio />
+          <TargetAudience />
+          <Testimonials />
+          <Services />
+          <About />
+          <FAQs />
+          <ConsultationCTA />
+        </div>
       </div>
     </main>
   );

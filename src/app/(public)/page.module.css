@@ -17,6 +17,11 @@
   background-color: var(--background);
 }
 
+.container-fluid {
+  max-width: 1171px;
+  margin: 0 auto;
+}
+
 .main {
   display: flex;
   min-height: 100vh;
