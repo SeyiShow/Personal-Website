@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <div className="container">
-        <div className="container-fluid">
+        <div className="container-fluid" style={{ maxWidth: "1443px" }}>
           <Hero />
           <Statement />
           <BrandMarquee />
