@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 
 export default function Footer() {
     return (
-        <footer className={styles.footer}>
+        <footer className={styles.footer} style={{ maxWidth: "1443px", margin: "0 auto" }}>
             <div className={`container ${styles.footerInner}`}>
                 <div className={styles.left}>
                     <div className={styles.logoArea}>
@@ -13,7 +13,7 @@ export default function Footer() {
                     <h3 className={styles.tagline}>
                         Ready to give life<br />to your ideas?
                     </h3>
-                    <a href="#consultation" className={`btn btn-primary ${styles.footerBtn}`}>
+                    <a href="https://calendly.com/oyeyemivictor1/30min" className={`btn btn-primary ${styles.footerBtn}`}>
                         Book a Free Call
                     </a>
                 </div>
