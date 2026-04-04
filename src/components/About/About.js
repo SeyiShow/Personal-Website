@@ -16,7 +16,11 @@ export default function About() {
 
                         </p>
                         <p>
-                            Professionally, with a background in industrial and electrical engineering, I’ve worked with multiple startups, helping them build brands that don’t just exist, but make sense and scale. My work sits at the intersection of brand strategy, design, and communication grounded in the belief that business growth starts with clarity, and clarity shapes perception.
+                            Professionally, with a background in industrial and
+                            electrical engineering, I&apos;ve partnered with multiple successful
+                            startups, helping them shape their identity through brand strategy,
+                            design and excellent communication. I believe business success
+                            starts with brand-awareness.
                         </p>
                     </div>
                 </div>
