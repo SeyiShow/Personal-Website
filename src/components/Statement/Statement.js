@@ -9,7 +9,7 @@ export default function Statement() {
                         WHY WORK WITH ME
                     </p>
                 </div>
-                <h2 className={styles.title}>Moves the needle daily.</h2>
+                <h2 className={styles.title}>Turning ideas into brands people trust and choose</h2>
                 <p className={styles.desc}>
                     I help turn ideas into clean brands, working products, and strong messages.
                     I combine purpose, creativity, and strategy to help people build something real, and do it

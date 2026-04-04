@@ -12,12 +12,8 @@ export default function About() {
                     </h2>
                     <div className={styles.desc}>
                         <p>
-                            I&apos;m Oluwaseyi Victor Sorinade and I am driven by the belief that
-                            societal change starts with individuals discovering their purpose. I
-                            guide people on a journey of self-discovery, aligning their unique
-                            strengths with positive impact. Through personal branding, I help
-                            people articulate their value authentically, fostering integrity and
-                            purpose.
+                            I&apos;m Oluwaseyi Victor Sorinade, driven by the belief that meaningful societal change begins with individuals gaining clarity about who they are and the value they bring. I guide people through a process of self-discovery, helping them align their strengths with impact. Through personal branding, I help individuals articulate their value with clarity and authenticity, not just to be seen, but to be trusted.
+
                         </p>
                         <p>
                             Professionally, with a background in industrial and
