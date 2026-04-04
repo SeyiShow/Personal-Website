@@ -18,9 +18,7 @@ export default function Hero() {
                         <span className={styles.tag}>DESIGN</span>
                     </div>
                     <p className={styles.heroDesc}>
-                        I&apos;m an engineer-turned brand strategist. From industrial systems to
-                        personal brands, I help individuals and startups articulate their
-                        purposes purposefully.
+                        I&apos;m an engineer-turned brand strategist. From industrial systems to personal brands, I help founders build brands that work using strategy, product thinking, and real-world insight.
                     </p>
                 </div>
                 <div className={styles.heroImage}>

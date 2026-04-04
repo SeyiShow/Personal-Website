@@ -12,19 +12,11 @@ export default function About() {
                     </h2>
                     <div className={styles.desc}>
                         <p>
-                            I&apos;m Oluwaseyi Victor Sorinade and I am driven by the belief that
-                            societal change starts with individuals discovering their purpose. I
-                            guide people on a journey of self-discovery, aligning their unique
-                            strengths with positive impact. Through personal branding, I help
-                            people articulate their value authentically, fostering integrity and
-                            purpose.
+                            I&apos;m Oluwaseyi Victor Sorinade, driven by the belief that meaningful societal change begins with individuals gaining clarity about who they are and the value they bring. I guide people through a process of self-discovery, helping them align their strengths with impact. Through personal branding, I help individuals articulate their value with clarity and authenticity, not just to be seen, but to be trusted.
+
                         </p>
                         <p>
-                            Professionally, With a background in industrial and
-                            electrical engineering, I&apos;ve partnered with multiple successful
-                            startups, helping them shape their identity through brand strategy,
-                            design and excellent communication. I believe business success
-                            starts with brand-awareness.
+                            Professionally, with a background in industrial and electrical engineering, I’ve worked with multiple startups, helping them build brands that don’t just exist, but make sense and scale. My work sits at the intersection of brand strategy, design, and communication grounded in the belief that business growth starts with clarity, and clarity shapes perception.
                         </p>
                     </div>
                 </div>
