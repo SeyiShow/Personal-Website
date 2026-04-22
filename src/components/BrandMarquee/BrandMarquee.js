@@ -34,7 +34,7 @@ export default function BrandMarquee() {
             <div className="">
                 <div className={styles.brandCard}>
                     <div className={styles.textContent}>
-                        <p>We have worked with a wide range of clients and organizations, including:</p>
+                        <p>I have worked with a wide range of clients and organizations, including:</p>
                     </div>
 
                     <div className={styles.marqueeArea}>
