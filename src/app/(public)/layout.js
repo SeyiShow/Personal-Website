@@ -14,6 +14,11 @@ export default function PublicLayout({ children }) {
             <Navbar />
             {children}
             <Footer />
+            <Script
+                src="https://api.landinghero.ai/public/assistant-widget.js"
+                data-project-id="8b2zi1YHpaSykv73L5mG"
+                strategy="afterInteractive"
+            />
         </>
     );
 }
